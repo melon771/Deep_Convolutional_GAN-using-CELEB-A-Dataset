@@ -1,6 +1,3 @@
-Here's an updated and more detailed `README.md` for your project, including an explanation of how the project works and what DCGANs are:
-
-```markdown
 # Deep Convolutional GAN using CelebA Dataset
 
 This project implements a **Deep Convolutional Generative Adversarial Network (DCGAN)** to generate realistic-looking face images from the **CelebA** dataset. It follows the architecture and methodology inspired by the well-known DCGAN model and trains a generator and discriminator to compete in a minimax game, improving the quality of generated images.
@@ -76,7 +73,6 @@ The discriminator model is a standard **convolutional neural network (CNN)**, us
 
 ## Project Structure
 
-```bash
 ├── README.md                <- You are here
 ├── CelebA_Dataset           <- Folder containing the CelebA dataset
 ├── DCGAN_Model              <- Code files for the DCGAN model
@@ -85,56 +81,45 @@ The discriminator model is a standard **convolutional neural network (CNN)**, us
 │   └── dcgan.py             <- Training script for DCGAN
 ├── utils.py                 <- Utility functions for data preprocessing, etc.
 └── results                  <- Folder to save generated images during training
-```
 
-## Requirements
-
-- Python 3.7+
-- TensorFlow 2.x
-- NumPy
-- Matplotlib
-- CelebA Dataset
-
+Requirements
+Python 3.7+
+TensorFlow 2.x
+NumPy
+Matplotlib
+CelebA Dataset
 Install the necessary packages using:
-```bash
+
+bash
+Copy code
 pip install -r requirements.txt
-```
+Dataset
+The CelebA dataset is used for training the GAN model. It contains over 200,000 celebrity face images with varying facial attributes. You can download the dataset from the official CelebA website.
 
-## Dataset
+How to Run the Project
+Clone the repository and navigate into the project directory:
 
-The **CelebA** dataset is used for training the GAN model. It contains over 200,000 celebrity face images with varying facial attributes. You can download the dataset from the official [CelebA website](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html).
+bash
+Copy code
+git clone https://github.com/concise-Sthita/Deep_Convolutional_GAN-using-CELEB-A-Dataset.git
+cd Deep_Convolutional_GAN-using-CELEB-A-Dataset
+Prepare the CelebA dataset by placing the images in the CelebA_Dataset directory.
 
-## How to Run the Project
+Train the DCGAN model:
 
-1. Clone the repository and navigate into the project directory:
-   ```bash
-   git clone https://github.com/concise-Sthita/Deep_Convolutional_GAN-using-CELEB-A-Dataset.git
-   cd Deep_Convolutional_GAN-using-CELEB-A-Dataset
-   ```
+bash
+Copy code
+python dcgan.py
+After training, generated images will be saved in the results folder.
 
-2. Prepare the CelebA dataset by placing the images in the `CelebA_Dataset` directory.
-
-3. Train the DCGAN model:
-   ```bash
-   python dcgan.py
-   ```
-
-4. After training, generated images will be saved in the `results` folder.
-
-## Sample Generated Images
-
+Sample Generated Images
 Here is an example of a generated image after training:
 
-![Sample](results/sample.png)
 
-## Conclusion
+Conclusion
+This project demonstrates the capabilities of Generative Adversarial Networks (GANs), specifically DCGANs, in generating realistic images of celebrity faces. The generator network continuously improves as it learns to create images that closely resemble real faces, while the discriminator helps refine this process.
 
-This project demonstrates the capabilities of **Generative Adversarial Networks (GANs)**, specifically **DCGANs**, in generating realistic images of celebrity faces. The generator network continuously improves as it learns to create images that closely resemble real faces, while the discriminator helps refine this process.
-
-## Acknowledgments
-
-- **Rohan Paul** for his original DCGAN implementation and tutorial, which provided the foundation for this project. His tutorial is available [here](https://github.com/rohan-paul/MachineLearning-DeepLearning-Code-for-my-YouTube-Channel/blob/master/Computer_Vision/DCGAN%20from%20Scratch%20with%20TensorFlow%20-%20Generate%20fake%20Faces%20from%20CelebA%20Dataset/DCGAN_with_Tensorflow_Keras_Celeb_A_Dataset.ipynb).
-- The **TensorFlow** community for providing a powerful framework to build and train deep learning models.
-```
-
-This version of the `README.md` provides more comprehensive details about how the project works, what DCGANs are, and how to run and train the model. Let me know if you'd like to add anything else!
+Acknowledgments
+Rohan Paul for his original DCGAN implementation and tutorial, which provided the foundation for this project. His tutorial is available here.
+The TensorFlow community for providing a powerful framework to build and train deep learning models.
+```bash
