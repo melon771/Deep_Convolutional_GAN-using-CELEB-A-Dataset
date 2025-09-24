@@ -1,0 +1,79 @@
+🧠 Medical Image Synthesis using GANs
+📌 Overview
+
+This project was developed as part of the Summer of Code (SOC) Capstone Project by Yash Shende (Chemical Engineering Department).
+
+The goal of this project is to explore medical image synthesis using Generative Adversarial Networks (GANs). The motivation is to generate synthetic MRI images of brain tumors which can be useful for:
+
+Data augmentation in training medical AI models
+
+Anonymized dataset generation for healthcare research
+
+This project served as a hands-on opportunity to learn GANs and diffusion models, while applying them to a meaningful, real-world application in healthcare.
+
+📂 Dataset
+
+Dataset Used: BraTS 2020
+
+Description: Contains multi-modal brain MRI scans (FLAIR, T1, T1Gd, T2) along with tumor segmentation masks.
+
+Use Case in Project: Used to train a GAN for synthesizing tumor MRI images.
+
+⚠️ Note:
+During development, dataset handling was a major challenge. The original BraTS dataset has a complex folder structure and different file formats (.nii.gz). Some preprocessing scripts from Kaggle were adapted, but parsing errors often resulted in the dataset being read as 0 images.
+
+🛠️ Approach
+
+Implemented a basic Generative Adversarial Network (GAN) consisting of:
+
+Generator → Produces synthetic MRI images
+
+Discriminator → Differentiates between real and fake MRI images
+
+Experimented with dataset preprocessing and loading functions to handle BraTS files.
+
+🚧 Challenges Faced
+
+Dataset Preprocessing:
+
+Difficulty in interpreting .nii.gz MRI volumes
+
+Issues with dataset loading functions (showing 0 images repeatedly)
+
+Had to debug and adapt Kaggle-based preprocessing scripts
+
+Model Training:
+
+GAN instability (mode collapse, discriminator overpowering generator)
+
+Limited computational resources
+
+📊 Results (Work in Progress)
+
+Successfully implemented a working GAN pipeline for image synthesis.
+
+Dataset loading is partially fixed, but requires further work for stable training.
+
+Initial outputs are noisy, but training shows promise.
+
+🚀 Future Work
+
+Improve dataset preprocessing pipeline for BraTS 2020.
+
+Extend GAN to conditional GANs (cGANs) or diffusion models for better tumor-conditioned synthesis.
+
+Train longer with more compute for higher quality outputs.
+
+Explore potential for data augmentation in real medical ML workflows.
+
+📖 References
+
+Goodfellow et al., 2014: Generative Adversarial Nets
+
+BraTS Challenge Datasets
+
+Kaggle preprocessing notebooks for BraTS MRI
+
+🙌 Acknowledgments
+
+Special thanks to SOC organizers, mentors, and peers for guidance and support during this project
